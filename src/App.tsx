@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Form from "./components/Form";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <h3>Hello world!</h3>
       <input
         type="text"
@@ -23,6 +24,7 @@ function App() {
       />
       <p>{count}</p>
       <button onClick={() => addCount()}>Increase</button>
+      <Form />
     </>
   );
 }

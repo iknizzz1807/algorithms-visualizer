@@ -37,7 +37,7 @@ function Form() {
     let randomElement: number;
 
     while (dataCounter < number) {
-      randomElement = Math.floor(Math.random() + number + 1);
+      randomElement = Math.floor(Math.random() * number) + 1;
       if (!newData.includes(randomElement)) {
         newData[dataCounter] = randomElement;
         dataCounter++;
@@ -48,7 +48,7 @@ function Form() {
 
   useEffect(() => {
     generateSample(number);
-  }, []);
+  }, []); // Activite when init loads
 
   return (
     <React.Fragment>
