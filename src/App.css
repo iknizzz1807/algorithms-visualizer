@@ -1,0 +1,119 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.controls-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.algorithm-info {
+  flex: 1;
+}
+
+.algorithm-info h2 {
+  margin: 0 0 10px 0;
+  color: #1976d2;
+  font-size: 1.5rem;
+}
+
+.algorithm-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.status-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: #e0e0e0;
+  color: #666;
+}
+
+.status-badge.active {
+  background-color: #2196f3;
+  color: white;
+}
+
+.status-badge.running {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-badge.paused {
+  background-color: #ff9800;
+  color: white;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .status-indicators {
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: #121212;
+  }
+
+  .controls-section,
+  .app-footer {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  .algorithm-info h2 {
+    color: #64b5f6;
+  }
+
+  .algorithm-info p {
+    color: #bbb;
+  }
+
+  .status-badge {
+    background-color: #333;
+    color: #fff;
+  }
+}

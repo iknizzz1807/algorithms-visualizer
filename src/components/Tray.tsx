@@ -1,17 +1,17 @@
 import React from "react";
+import Bar from "./Bar";
+import { Bar as BarType } from "../types";
 
 interface TrayProps {
-  algorithm: string;
-  data: number[];
-  setData: React.Dispatch<React.SetStateAction<number[]>>;
+  array: BarType[];
 }
 
-const Tray: React.FC<TrayProps> = ({ algorithm, data, setData }) => {
+const Tray: React.FC<TrayProps> = ({ array }) => {
   return (
-    <div>
-      <h3>Algorithm: {algorithm}</h3>
-      <p>Data: {data.join(", ")}</p>
-      <button onClick={() => setData([])}>Clear Data</button>
+    <div style={{ display: "flex", alignItems: "flex-end", marginTop: "20px" }}>
+      {array.map((bar, index) => (
+        <Bar key={index} value={bar.value} color={bar.color} />
+      ))}
     </div>
   );
 };
