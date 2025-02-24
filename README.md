@@ -6,3 +6,5 @@ This project is for learning React
 npm i
 npm run dev
 ```
+#### Demo
+https://sorting-algorithms-visualizer-psi-eosin.vercel.app/
