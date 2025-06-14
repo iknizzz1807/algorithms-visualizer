@@ -3,10 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mã đi tuần - Knight's Tour</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #2c3e50;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+        cursor: crosshair;
+      }
+
+      button {
+        position: absolute;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      button:disabled {
+        background-color: #7f8c8d;
+        cursor: not-allowed;
+      }
+
+      #stop-btn {
+        background-color: #e74c3c;
+      }
+
+      #stop-btn:hover {
+        background-color: #c0392b;
+      }
+
+      #reset-btn {
+        background-color: #f39c12;
+      }
+
+      #reset-btn:hover {
+        background-color: #e67e22;
+      }
+
+      #save-btn {
+        background-color: #27ae60;
+      }
+
+      #save-btn:hover {
+        background-color: #229954;
+      }
+
+      input {
+        position: absolute;
+        padding: 8px 12px;
+        border: 2px solid #34495e;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 180px;
+        background-color: white;
+        color: #2c3e50;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #3498db;
+      }
+    </style>
   </head>
   <body>
     <canvas id="canvas"></canvas>
+
+    <!-- Control buttons -->
+    <button id="start-btn">Bắt đầu</button>
+    <button id="stop-btn">Dừng lại</button>
+    <button id="reset-btn">Đặt lại</button>
+    <button id="save-btn">Lưu</button>
+
+    <!-- Input controls -->
+    <input
+      id="board-size-input"
+      type="number"
+      min="4"
+      max="10"
+      placeholder="Kích thước bàn cờ (4-10)"
+    />
+    <input
+      id="speed-input"
+      type="number"
+      min="50"
+      max="2000"
+      placeholder="Tốc độ (50-2000ms)"
+    />
+
     <script src="script.js"></script>
   </body>
 </html>
